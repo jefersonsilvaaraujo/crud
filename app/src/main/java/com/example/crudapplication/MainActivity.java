@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             arrayIds = new ArrayList<>();
             bancoDados = openOrCreateDatabase("crudapp",MODE_PRIVATE, null);
-            Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM coisa", null);
+            Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM coisa ORDER BY nome", null);
             ArrayList<String> linhas = new ArrayList<String>();
             ArrayAdapter meuAdapter = new ArrayAdapter<String>(
                     this,
